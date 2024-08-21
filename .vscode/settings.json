@@ -1,0 +1,27 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "notebook.formatOnSave.enabled": false,
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "html.format.indentHandlebars": false,
+  "json.format.keepLines": true,
+  "wrap-console-log.autoFormat": false,
+  "javascript.format.insertSpaceAfterConstructor": false,
+  "javascript.format.semicolons": "insert",
+  "prettier.requirePragma": false,
+  "prettier.requireConfig": false,
+  "prettier.insertPragma": false,
+  "css.format.enable": false,
+  "css.format.newlineBetweenRules": false,
+  "css.format.newlineBetweenSelectors": true,
+  "css.format.preserveNewLines": true,
+  "css.format.braceStyle": "collapse",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
+}
