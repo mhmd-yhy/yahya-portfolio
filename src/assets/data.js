@@ -197,8 +197,8 @@ export const portfolio = [
     title: "foodera restaurant",
     topics: ["bootstrap5"],
     category: "css",
-    view: "https://github.com/mhmd-yhy/foodera-restaurant",
-    code: "https://mhmd-yhy-foodera.netlify.app",
+    view: "https://mhmd-yhy-foodera.netlify.app",
+    code: "https://github.com/mhmd-yhy/foodera-restaurant",
   },
   {
     image: Images.dashboard,
