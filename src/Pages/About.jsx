@@ -39,7 +39,7 @@ export default function About() {
             {about.stats.map((value, i) => (
               <div
                 key={i}
-                className="box py-3 mb-2 sm:mb-0 bg-transparent rounded-lg overflow-hidden text-center border-2 our-border-color relative duration-500 opacity-30 hover:opacity-100 hover:-translate-y-2"
+                className="box py-3 mb-2 sm:mb-0 overflow-hidden bg-transparent rounded-lg text-center border-2 our-border-color relative duration-500 opacity-30 hover:opacity-100 hover:-translate-y-2 before:content-normal after:content-normal before:absolute after:absolute before:w-1 after:w-1 before:h-0 after:h-0 before:duration-500 after:duration-500 before:top-0 after:bottom-0 before:-left-px after:-right-px before:hover:h-full after:hover:h-full"
               >
                 <div className="icon text-5xl text-zinc-500 flex justify-center mb-2">
                   {value.icon}

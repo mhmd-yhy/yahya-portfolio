@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {portfolio} from "../assets/data";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { portfolio } from "../assets/data";
+import { Link } from "react-router-dom";
 import Heading from "../Components/Heading";
 import RouterAnimation from "../Components/RouterAnimation";
 
@@ -80,7 +80,7 @@ export default function Portfolio() {
                     <Link
                       to={project.view}
                       target="_blank"
-                      className="link relative text-zinc-500 capitalize text-base duration-500 hover:text-blue-500"
+                      className="link relative text-zinc-500 capitalize text-base duration-500 hover:text-blue-500 after:absolute after:content-normal after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:duration-500 after:hover:w-full"
                     >
                       view
                     </Link>
@@ -88,7 +88,7 @@ export default function Portfolio() {
                     <Link
                       to={project.code}
                       target="_blank"
-                      className="link relative text-zinc-500 capitalize text-base duration-500 hover:text-blue-500"
+                      className="link relative text-zinc-500 capitalize text-base duration-500 hover:text-blue-500 after:absolute after:content-normal after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:duration-500 after:hover:w-full"
                     >
                       code
                     </Link>
@@ -103,7 +103,7 @@ export default function Portfolio() {
           <Link
             to={`https://github.com/mhmd-yhy`}
             target="_blank"
-            className="link capitalize text-blue-500 relative hover:tracking-wider"
+            className="link capitalize text-blue-500 relative hover:tracking-wider after:absolute after:content-normal after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:duration-500 after:hover:w-full"
           >
             github
           </Link>
