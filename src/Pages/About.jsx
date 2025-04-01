@@ -1,8 +1,10 @@
 import Heading from "../Components/Heading";
-import {about} from "../assets/data";
+import { about } from "../assets/data";
 import RouterAnimation from "../Components/RouterAnimation";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => { localStorage.removeItem("role"); }, []);
   return (
     <section className="about mt-8 lg:mt-12 xl:m-0 ">
       <RouterAnimation title="about" />

@@ -2,11 +2,17 @@ import Icons from "./Icons";
 import Images from "./Images";
 import cv from "../assets/ResumeMuhammedYahya.pdf";
 
+let pathname = "";
+if (window.location.pathname === "/dashboard") pathname = "/dashboard";
+if (window.location.pathname === "/login") pathname = "/login";
+
+export const login = { email: "admin@gmail.com", password: "adminZx", icon: Icons.login.Login };
 export const links = [
-  {icon: Icons.links.PersonOutline, text: "about", path: "/"},
-  {icon: Icons.links.LaptopCode, text: "services", path: "/services"},
-  {icon: Icons.links.BriefcaseOutline, text: "portfolio", path: "/portfolio"},
-  {icon: Icons.links.OutlineContacts, text: "contact", path: "/contact"},
+  { icon: Icons.links.PersonOutline, text: "about", path: "/" },
+  { icon: Icons.links.LaptopCode, text: "services", path: "/services" },
+  { icon: Icons.links.BriefcaseOutline, text: "portfolio", path: "/portfolio" },
+  { icon: Icons.links.OutlineContacts, text: "contact", path: "/contact" },
+  (pathname === "/dashboard" || pathname === "/login") && { icon: pathname === "/dashboard" ? Icons.links.Dashboard : Icons.links.Login, text: pathname === "/dashboard" ? "dashboard" : "login", path: pathname === "/dashboard" ? "/dashboard" : "/login" },
 ];
 export const landing = {
   image: Images.avatar,
@@ -88,9 +94,9 @@ export const about = {
     },
   ],
   stats: [
-    {icon: Icons.stats.PersonOutline, text: "clints", stat: "10"},
-    {icon: Icons.stats.Validate, text: "years experience", stat: "2"},
-    {icon: Icons.stats.LaptopCode, text: "projects", stat: "20"},
+    { icon: Icons.stats.PersonOutline, text: "clints", stat: "10" },
+    { icon: Icons.stats.Validate, text: "years experience", stat: "2" },
+    { icon: Icons.stats.LaptopCode, text: "projects", stat: "20" },
   ],
 };
 export const services = {
@@ -117,13 +123,13 @@ export const services = {
     },
   ],
   skills: [
-    {icon: Icons.skills.Html5, color: "#e6511e"},
-    {icon: Icons.skills.Css3Alt, color: "#2D53E5"},
-    {icon: Icons.skills.JsSquare, color: "#f4e224"},
-    {icon: Icons.skills.React, color: "#08d9ff"},
-    {icon: Icons.skills.redux, color: "#7a50be"},
-    {icon: Icons.skills.Bootstrap, color: "#7719f7"},
-    {icon: Icons.skills.Tailwind, color: "#0eb8d5"},
+    { icon: Icons.skills.Html5, color: "#e6511e", title: "Html5" },
+    { icon: Icons.skills.Css3Alt, color: "#2D53E5", title: "Css3Alt" },
+    { icon: Icons.skills.JsSquare, color: "#f4e224", title: "JsSquare" },
+    { icon: Icons.skills.React, color: "#08d9ff", title: "React" },
+    { icon: Icons.skills.redux, color: "#7a50be", title: "redux" },
+    { icon: Icons.skills.Bootstrap, color: "#7719f7", title: "Bootstrap" },
+    { icon: Icons.skills.Tailwind, color: "#0eb8d5", title: "Tailwind" },
   ],
 };
 export const portfolio = [
@@ -214,9 +220,9 @@ export const contact = {
   desc: "Feel free to reach out to discuss your project ideas,collaborations, or any questions you might have.",
   myEmail: "muhammedyahyazx@gmail.com",
   form: [
-    {title: "your name", type: "text", name: "name"},
-    {title: "email", type: "email", name: "email"},
-    {title: "message", type: "text", name: "message"},
+    { title: "your name", type: "text", name: "name" },
+    { title: "email", type: "email", name: "email" },
+    { title: "message", type: "text", name: "message" },
   ],
   sendIcon: Icons.contact.sendContact,
 };

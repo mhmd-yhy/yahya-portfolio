@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "../Components/Heading";
-import {services} from "../assets/data";
+import { services } from "../assets/data";
 import RouterAnimation from "../Components/RouterAnimation";
 
 // Import Swiper React components
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 // import required modules
-import {Autoplay, Scrollbar} from "swiper/modules";
+import { Autoplay, Scrollbar } from "swiper/modules";
 
 export default function Services() {
+  useEffect(() => { localStorage.removeItem("role"); }, []);
   return (
     <section className="services mt-8 lg:mt-12 xl:m-0">
       <RouterAnimation title="services" />
@@ -56,7 +57,7 @@ export default function Services() {
                 <SwiperSlide
                   key={i}
                   className="skill text-7xl sm:text-9xl cursor-grab justify-center items-center"
-                  style={{color: value.color, display: "flex"}}
+                  style={{ color: value.color, display: "flex" }}
                 >
                   <i className="mx-auto text-center">{value.icon}</i>
                 </SwiperSlide>

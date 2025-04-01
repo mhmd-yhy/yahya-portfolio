@@ -17,7 +17,7 @@
 }
 ::-webkit-scrollbar-thumb:hover {background-color: var(--Back-1);}
 section {user-select: none;}
-.router-Animation {animation: router-Animation 2s ease;}
+.router-Animation {animation: router-Animation 1s ease;}
 @keyframes router-Animation {
   0% {left: -50%;}
   15%,

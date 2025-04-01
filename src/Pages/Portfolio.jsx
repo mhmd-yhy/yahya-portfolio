@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { portfolio } from "../assets/data";
 import { Link } from "react-router-dom";
 import Heading from "../Components/Heading";
 import RouterAnimation from "../Components/RouterAnimation";
 
 export default function Portfolio() {
+  useEffect(() => { localStorage.removeItem("role"); }, []);
   const categoriesArray = portfolio.map((project, i) => project.category);
   const unique_categories = ["all", ...new Set(categoriesArray)];
   // console.log(unique_categories);
@@ -34,11 +35,10 @@ export default function Portfolio() {
               <li
                 data-category={category}
                 key={i}
-                className={` capitalize border our-border-color shadow-md rounded-md text-lg py-1 px-4 cursor-pointer tracking-widest duration-500 hover:bg-blue-500 hover:text-white ${
-                  activeCategory === category
+                className={` capitalize border our-border-color shadow-md rounded-md text-lg py-1 px-4 cursor-pointer tracking-widest duration-500 hover:bg-blue-500 hover:text-white ${activeCategory === category
                     ? "bg-blue-500 text-white"
                     : "bg-transparent text-zinc-500"
-                }`}
+                  }`}
                 onClick={(e) => {
                   setActiveCategory(e.target.dataset.category);
                 }}

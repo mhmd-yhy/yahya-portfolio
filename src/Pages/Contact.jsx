@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RouterAnimation from "../Components/RouterAnimation";
 import Heading from "../Components/Heading";
 import MyInput from "../Components/MyInput";
 import {contact} from "../assets/data";
 
 export default function Contact() {
+  useEffect(() => { localStorage.removeItem("role"); }, []);
   return (
     <section className="contact mt-8 lg:mt-12 xl:m-0">
       <RouterAnimation title="contact" />

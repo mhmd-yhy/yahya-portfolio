@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {landing} from "../assets/data";
-import {Link, NavLink} from "react-router-dom";
+import React, { useState } from "react";
+import { landing } from "../assets/data";
+import { Link, NavLink } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 
 export default function Landing() {
@@ -20,7 +20,7 @@ export default function Landing() {
       </span>
       <div
         className={`back-2 text-white rounded-2xl border our-border-color sticky overflow-hidden duration-500`}
-        style={{top: "0"}}
+        style={{ top: "0" }}
       >
         <div className="top-sec pt-5 pl-3 sm:px-5">
           <div className="flex items-center lg:block ">
@@ -71,9 +71,8 @@ export default function Landing() {
               return (
                 <li
                   key={i}
-                  className={`flex ${
-                    value.borderBottom ? "border-b-2" : ""
-                  } our-border-color p-3`}
+                  className={`flex ${value.borderBottom ? "border-b-2" : ""
+                    } our-border-color p-3`}
                 >
                   <div
                     className={`icon p-2 mr-2 text-2xl rounded-lg back-2 ${value.iconColor} hover:text-white hover:bg-blue-500 duration-500`}
