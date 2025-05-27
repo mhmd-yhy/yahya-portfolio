@@ -134,6 +134,14 @@ export const services = {
 };
 export const portfolio = [
   {
+    image: Images.ecommerce,
+    title: "e-commerce",
+    topics: ["react", "tailwind", "redux-toolkit"],
+    category: "js",
+    view: "https://mhmd-yhy-e-commerce-1.netlify.app",
+    code: "https://github.com/mhmd-yhy/e-commerce-yahya-shop",
+  },
+  {
     image: Images.toDoListReact,
     title: "to-do list app",
     topics: ["react", "bootstrap5"],
@@ -166,14 +174,6 @@ export const portfolio = [
     code: "https://github.com/mhmd-yhy/portfolio-react-1",
   },
   {
-    image: Images.cruds,
-    title: "cruds app",
-    topics: ["js", "bootstrap5"],
-    category: "js",
-    view: "https://mhmd-yhy-cruds.netlify.app",
-    code: "https://github.com/mhmd-yhy/CRUDS",
-  },
-  {
     image: Images.simpleShoppingCart,
     title: "simple shopping cart",
     topics: ["react", "bootstrap5"],
@@ -182,12 +182,12 @@ export const portfolio = [
     code: "https://github.com/mhmd-yhy/shopping-cart-react",
   },
   {
-    image: Images.toDoList,
-    title: "to-do list app",
-    topics: ["js", "bootstrap5"],
+    image: Images.foodDelivery,
+    title: "food delivery app",
+    topics: ["react", "tailwind", "context-api"],
     category: "js",
-    view: "https://mhmd-yhy-todo-list.netlify.app",
-    code: "https://github.com/mhmd-yhy/To-Do-List",
+    view: "https://mhmd-yhy-food-delivery.netlify.app",
+    code: "https://github.com/mhmd-yhy/food-delivery-app",
   },
   {
     image: Images.specialDesign,
@@ -207,12 +207,12 @@ export const portfolio = [
     code: "https://github.com/mhmd-yhy/foodera-restaurant",
   },
   {
-    image: Images.dashboard,
-    title: "dashboard",
-    topics: ["css"],
-    category: "css",
-    view: "https://mhmd-yhy-dashboard-html.netlify.app",
-    code: "https://github.com/mhmd-yhy/DashBoard",
+    image: Images.recipeFood,
+    title: "recipe food app",
+    topics: ["react", "tailwind", "api",],
+    category: "js",
+    view: "https://mhmd-yhy-recipe-food.netlify.app",
+    code: "https://github.com/mhmd-yhy/recipe-food-app",
   },
 ];
 export const contact = {

@@ -53,7 +53,7 @@ export default function Portfolio() {
                   <h2 className="title  text-xl mt-1 capitalize">{project.title}</h2>
                   <ul className="topics list-none flex flex-wrap gap-2 mt-2">
                     {project.topics.map((toppic, i) => (
-                      <li key={i} className="topic rounded-xl text-md text-zinc-300 bg-blue-500 px-2" >{toppic}</li>
+                      <li key={i} className="topic rounded-xl text-sm text-zinc-300 bg-blue-500 px-2" >{toppic}</li>
                     ))}
                   </ul>
                   <div className="links mt-2">
