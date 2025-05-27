@@ -23,19 +23,26 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
-import {BiLogoRedux, BiLogoTailwindCss, BiMailSend} from "react-icons/bi";
-import {IoBriefcaseOutline, IoPersonOutline} from "react-icons/io5";
-import {GrOptimize, GrValidate} from "react-icons/gr";
-import {FaLocationDot} from "react-icons/fa6";
-import {GiSandsOfTime} from "react-icons/gi";
-import {SiFramework} from "react-icons/si";
+import { BiLogoRedux, BiLogoTailwindCss, BiMailSend } from "react-icons/bi";
+import { IoBriefcaseOutline, IoPersonCircleSharp, IoPersonOutline } from "react-icons/io5";
+import { GrOptimize, GrValidate } from "react-icons/gr";
+import { FaLocationDot } from "react-icons/fa6";
+import { GiSandsOfTime } from "react-icons/gi";
+import { SiFramework } from "react-icons/si";
+import { VscDashboard } from "react-icons/vsc";
+import { TbLogin2 } from "react-icons/tb";
 
 const Icons = {
+  login: {
+    Login: <IoPersonCircleSharp />,
+  },
   links: {
     PersonOutline: <IoPersonOutline />,
     LaptopCode: <FaLaptopCode />,
     BriefcaseOutline: <IoBriefcaseOutline />,
     OutlineContacts: <MdOutlineContacts />,
+    Dashboard: <VscDashboard />,
+    Login: <TbLogin2 />,
   },
   social: {
     FacebookF: <FaFacebookF />,

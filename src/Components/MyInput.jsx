@@ -1,15 +1,10 @@
 import React from "react";
 
-export default function MyInput({title, type, name}) {
+export default function MyInput({ title, type, name }) {
   return (
-    <div className="flex flex-col text-zinc-500 mb-4">
+    <div className="flex flex-col dark:text-Text-Color-Dark mb-4">
       <label className="text-lg capitalize">{title}</label>
-      <input
-        type={type}
-        name={name}
-        required
-        className="border-b our-border-color bg-transparent outline-none mt-2 px-2 duration-500 hover:border-b-blue-500"
-      />
+      <input type={type} name={name} required className="border-b border-Border-Color-Light dark:border-Border-Color-Dark bg-transparent outline-none mt-2 px-2 hover:border-b-blue-500 dark:hover:border-b-blue-500" />
     </div>
   );
 }

@@ -1,39 +1,44 @@
-import {links} from "../assets/data.js";
-import {NavLink} from "react-router-dom";
+import { CiLight } from "react-icons/ci";
+import { links } from "../assets/data.js";
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext.js";
+import { MdOutlineDarkMode } from "react-icons/md";
 
-export default function NavSide() {
+export default function NavSide({ visible }) {
+  const { theme, Change_Theme } = useContext(ThemeContext);
   return (
     <div className="navside">
-      <ul className="list-none back-2 p-5 text-white rounded-2xl border-4 xl:border our-border-color flex justify-evenly w-96 xl:w-auto xl:block fixed xl:sticky top-0 rounded-b-full left-1/2 -translate-x-1/2 xl:translate-x-0 z-40">
-        {links.map((value, i) => {
+      <ul className={`list-none bg-Sec-Back-Light dark:bg-Sec-Back-Dark p-5 text-zinc-300 rounded-2xl border-4 border-Border-Color-Light dark:border-Border-Color-Dark flex justify-evenly w-11/12 sm:w-96 ${visible ? "xl:border xl:block xl:sticky xl:w-auto -translate-x-1/2" : "lg:border lg:block lg:sticky lg:w-auto -translate-x-1/2 lg:translate-x-0"} fixed top-0 rounded-b-full left-1/2  xl:translate-x-0 z-40`}>
+        {links.slice(0, visible ? 4 : links.length).map((value, i) => {
+
           return (
-            <li
-              key={i}
-              className="xl:mb-4"
-              onClick={() => {
-                window.scrollTo({
-                  behavior: "instant",
-                  top: "0",
-                });
-              }}
-            >
+            <li key={i} className={`${visible ? "xl:mb-4 " : "lg:mb-4"}`}
+              onClick={() => { window.scrollTo({ behavior: "instant", top: "0", }); }}>
               <NavLink
                 to={value.path}
-                className={({isActive}) => {
+                className={({ isActive }) => {
                   return (
-                    `rounded-lg text-center flex flex-col items-center p-2 capitalize hover:text-white hover:bg-blue-500 duration-500 ` +
+                    `rounded-lg text-center flex flex-col items-center p-2 capitalize hover:text-white hover:bg-blue-500 dark:hover:text-white dark:hover:bg-blue-500 ` +
                     (isActive
                       ? `bg-blue-500 text-white`
-                      : `text-zinc-500 back-3`)
+                      : `dark:text-Text-Color-Dark bg-Third-Back-Light dark:bg-Back-Dark`)
                   );
-                }}
-              >
+                }}>
                 <h2 className="text-2xl">{value.icon}</h2>
-                <h3 className="hidden xl:block">{value.text}</h3>
+                <h3 className={`hidden ${visible ? "xl:block " : "lg:block"}`}>{value.text}</h3>
               </NavLink>
             </li>
           );
         })}
+
+        <li className={`lg:mb-4`} onClick={() => { Change_Theme(theme === "light" ? "dark" : "light"); }}>
+          <div
+            className={`rounded-lg text-center flex flex-col items-center p-2 capitalize hover:text-white hover:bg-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:text-Text-Color-Dark bg-Third-Back-Light dark:bg-Back-Dark cursor-pointer`}>
+            <h2 className="text-2xl">{theme === "light" ? <CiLight /> : <MdOutlineDarkMode />}</h2>
+            <h3 className={`hidden ${visible ? "xl:block " : "lg:block"}`}>{theme === "light" ? "light" : "dark"}</h3>
+          </div>
+        </li>
       </ul>
     </div>
   );

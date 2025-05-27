@@ -1,24 +1,22 @@
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import NavSide from "./Components/NavSide";
-import Landing from "./Components/Landing";
-import Footer from "./Components/Footer";
 import Pages from "./Pages/Pages";
+import ThemeContext from "./context/ThemeContext";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+  const Change_Theme = (theme) => { setTheme(theme); };
   return (
-    <BrowserRouter>
-      <div className="App back-1 xl:px-16 relative">
-        <div className="container lg:flex justify-between gap-5 sm:mx-auto py-16 px-4 lg:px-0">
-          <Landing />
-          <div>
+    <div className={`App ${theme} `}>
+      <div className="bg-Back-Light dark:bg-Back-Dark xl:px-16 relative min-h-screen">
+        <ThemeContext.Provider value={{ theme, Change_Theme }}>
+          <BrowserRouter>
             <Pages />
-            <Footer />
-          </div>
-          <NavSide />
-        </div>
+          </BrowserRouter>
+        </ThemeContext.Provider>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 
